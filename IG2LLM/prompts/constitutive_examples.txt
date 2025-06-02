@@ -1,0 +1,39 @@
+<user_query id="example-1">
+No reimbursement shall be made for disallowed costs.
+</user_query>
+
+<assistant_response id="example-1">
+{"E":["reimbursement"],"M":["shall"],"F":["be made"],"P,p":["disallowed"],"P":["costs"]}
+</assistant_response>
+
+<user_query id="example-2">
+Approval of an application for a loan by the Board constitutes a preliminary decision under the MOA
+</user_query>
+
+<assistant_response id="example-2">
+{"E":["Board Approval"],"E,p":["of an application for a loan by the Board"],"F":["constitutes"],"P,p":["preliminary"],"P":["decision"],"Cex":["under the MOA"]}
+</assistant_response>
+
+<user_query id="example-3">
+Each agreement will contain a provision requiring the Borrower to comply with all applicable provisions of the Watershed Regulations.
+</user_query>
+
+<assistant_response id="example-3">
+{"E,p":["Each"],"E":["agreement"],"M":["will"],"F":["contain"],"P":["provision"],"P,p":["requiring the Borrower to comply with all applicable provisions of the Watershed Regulations"]}
+</assistant_response>
+
+<user_query id="example-4">
+Notwithstanding Section 10231.5 of the Government Code, the requirement for submitting a report imposed under paragraph (1) is inoperative on January 1, 2021.
+</user_query>
+
+<assistant_response id="example-4">
+{"Cex":["Notwithstanding Section 10231.5 of the Government Code"],"E":["requirement"],"E,p":["for submitting a report imposed under paragraph 1"],"F":["is"],"P":["inoperative"],"Cac":["on January 1, 2021"]}
+</assistant_response>
+
+<user_query id="example-5">
+Subject to this section, the requirements of this article apply to an electrical corporation that as of January 1, 2010, had 60,000 or fewer customer accounts in California.
+</user_query>
+
+<assistant_response id="example-5">
+{"Cex":["Subject to this section"],"E":["requirements"],"E,p":["of this article"],"F":["apply to"],"P":["an electrical corporation"],"P,p":["that as of January 1, 2010, had <=60,000 customer accounts in California"]}
+</assistant_response>

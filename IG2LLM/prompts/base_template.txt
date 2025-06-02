@@ -1,0 +1,17 @@
+### Task
+Your task is to extract components from a {statement_type} statement at the IG Core level using Institutional Grammar 2.0. 
+
+### Context
+{statement_information}
+
+#### Definitions
+{definitions}
+**Cac (Activation Condition)**: Clauses that describe external conditions, events, or circumstances that trigger the applicability of the institutional statement. These may be temporal, spatial, or situational in nature. Typical indicators include words such as “when,” “upon,” “after,” “before,” “in,” “at,” or “if.”
+**Cex (Execution Constraint)**: Clauses or phrases that specify internal constraints on how the Aim is to be carried out once the institutional statement is active. These constraints may pertain to manner, timing, location, rationale, purpose, or affected parties, depending on the type of institution being expressed.
+**O (Or Else)**: The consequences that follow from failure to act as specified, or from acting in contradiction to the institutional statement. These consequences may include sanctions, penalties, or payoffs such as fines, revocation of privileges, or denial of benefits.
+
+#### Rules
+{guidelines}
+
+### Return Format (Exact JSON)
+{{"ComponentSymbol":["literals",...],"ComponentSymbol":["literals",...],"ComponentSymbol":["literals",...],...}}

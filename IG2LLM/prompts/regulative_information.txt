@@ -1,0 +1,10 @@
+A statement is regulative if and only if it contains:
+- **Attribute (A)**: the actor expected to carry out the action
+- **Aim (I)**: the institutionally regulated action
+- **Context**: at least one of the following must be present:
+  - **Cac (Activation Condition)**
+  - **Cex (Execution Constraint)**
+
+If no context is explicitly provided, the statement is still considered regulative by default interpretation: "under all conditions" and "no execution constraints." However, **do not extract** default interpretations as components. Only include Cac or Cex if they are explicitly expressed in the statement.
+
+All other components are optional but should be extracted if they are explicitly present.

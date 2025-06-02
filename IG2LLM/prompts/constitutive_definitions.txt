@@ -1,0 +1,6 @@
+**E (Constituted Entity)**: The entity (individual, role, object, or concept) introduced, defined, or modified by the Constitutive Function (F) within the institutional setting.
+**E,p (Constituted Entity Properties)**: Descriptive, classifying, or qualifying characteristics (adjectives, adjectival phrases, or clauses) that specify or narrow the scope of the Constituted Entity (E).
+**M (Modal)**: An epistemic operator expressing necessity, possibility, or prohibition of the Constitutive Function (F) and its institutional effect. Examples include “shall,” “must,” “may,” or “must not.”
+**F (Constitutive Function)**: The verb or phrase that introduces, defines, modifies, or composes the Constituted Entity (E). This may include identity statements (e.g., “is”), compositional verbs (e.g., “consists of”), or other definitional markers (e.g., “constitutes,” “means”).
+**P (Constituting Properties)**: The elements (actors, roles, objects, features, or conditions) that define, compose, or qualify the Constituted Entity (E) through the action of F.
+**P,p (Constituting Properties Properties)**: Descriptive, classifying, or qualifying characteristics that specify or narrow the scope of individual Constituting Properties (P).

@@ -1,0 +1,9 @@
+openai
+dotenv
+tabulate
+tqdm
+langchain
+pydantic
+google-genai
+anthropic
+numpy

@@ -1,0 +1,55 @@
+### Goal
+Your task is to extract components from a regulative statement at the IG Core level using Institutional Grammar 2.0. 
+
+A valid regulative statement must include an Attribute (the actor), an Aim (the action), and a Context (activation conditions and execution constraints). If no context is specified, assume defaults of "under all conditions" for activation and "no constraints" for execution. When using defaults, they should be omitted from the extraction. All other components are optional and should only be extracted if explicitly present.
+
+### Definitions
+A (Attribute): The actor (individual, corporate entity, organization) expected to carry out or refrain from the action specified by the Aim (I).
+A,p (Attribute Properties): Descriptive, qualifying, or limiting characteristics (expressed as adjectives, adjectival phrases, or clauses) that explicitly modify or narrow the scope of the Attribute (A) by identifying inherent, stable, or role-based features of the actor.
+I (Aim): The action verb or verb phrase (e.g., "submit", "cast", "carry out", "comply with", "review", "approve") describing an institutionally regulated activity or behavior that can be complied with or violated.
+Bdir (Direct Object): The animate, inanimate, or abstract element directly acted upon by the Aim (I).
+Bdir,p (Direct Object Properties): Descriptive, qualifying, or conditional characteristics (expressed as adjectives, adjectival phrases, or clauses) that explicitly identify inherent, situational, or role-relevant features which modify or narrow the scope of the Direct Object (Bdir).
+Bind (Indirect Object): The animate, inanimate, or abstract element that is indirectly affected by or receives the outcome of the Aim’s (I) application to the Direct Object (Bdir). Can only be present in a statement if a Direct Object (Bdir) is explicitly present.
+Bind,p (Indirect Object Properties): Descriptive, qualifying, or conditional characteristics (expressed as adjectives, adjectival phrases, or clauses) that explicitly identify inherent, situational, or role-relevant features which modify or narrow the scope of the Indirect Object (Bind).
+D (Deontic): A modal verb or explicit directive (e.g., "shall", "shall not", "will", "must", "must not", "may", "may not", "is required to", "is permitted to") expressing obligation, permission, or prohibition.
+Cac (Activation Condition): Clause(s) explicitly describing external conditions, events, or circumstances (e.g., temporal conditions like "when", "upon", "after", "prior to", "before", or spatial conditions such as "in", "at") that activate the applicability of the institutional statement as a whole.
+Cex (Execution Constraint): Clause(s) or phrase(s) explicitly specifying internal constraints on how the Aim (regulated action) must be executed once the institutional statement is active. This includes constraints detailing manner, timing, location, rationale, purpose, or intended recipients of the regulated action. 
+O (Or Else): Clause explicitly describing consequences or sanctions resulting from non-compliance with the institutional statement.
+
+### Guidelines
+Maintain exact capitalization and wording from the original statement.
+Do NOT rely on sentence position to classify components; extract based on semantic function only.
+Do NOT infer or assume any component that is not explicitly stated.
+Do NOT invent components. If a component is not explicitly present, do not include it.
+Always omit leading determiners such as "the", "this", "their", "those", "any", "a", "an".
+
+#### Attribute (A) and Attribute Properties (A,p) 
+Always split off leading descriptive qualifiers, adjectives, or possessive determiners from A as A,p.
+- Exception: Only keep a determiner if it is part of an official title or proper name (e.g., "The Queen", "The Netherlands").
+
+#### Direct Object (Bdir) and Direct Object Properties (Bdir,p) / Indirect Object (Bind) and Indirect Object Properties (Bind,p)
+Only split off modifiers as Bdir,p or Bind,p when they clearly precede and independently describe the noun (e.g., “obligatory classes”), occur at a natural phrase boundary, and can be cleanly detached from the beginning or end of the noun phrase (never from the middle).
+Never split nouns from the middle of a phrase. If a noun is embedded inside a longer noun phrase, treat the WHOLE PHRASE as a unit.
+Do NOT move adjectives or descriptors across components if it creates ungrammatical or incoherent segments.
+
+### Return Format (Exact JSON)
+{"ComponentSymbol":["literals",...],"ComponentSymbol":["literals",...],"ComponentSymbol":["literals",...],...}
+
+### Examples
+Input: Upon signing a memorandum of understanding with a private contractor to serve as the oversight authority, the compliance officer must review the contractor’s operational plan within 45 days.
+Output: {"Cac":["Upon signing a memorandum of understanding with a private contractor to serve as the oversight authority"],"A":["officer"],"A,p":["compliance"],"D":["must"],"I":["review"],"Bdir":["contractor’s operational plan"],"Cex":["within 45 days"]}
+
+Input: Executive committee encourages civic participation.
+Output: {"A":["Executive committee"],"I":["encourages"],"Bdir,p":["civic"],"Bdir":["participation"]}
+
+Input: The council shall authorize a logistics company to reclaim validated transportation surcharge costs via approved invoicing procedures.
+Output: {"A":["council"],"D":["shall"],"I":["authorize"],"Bdir":["logistics company"],"Bdir,p":["to reclaim validated transportation surcharge costs via approved invoicing procedures"]}
+
+Input: Once admitted to university, every student must attend obligatory classes Monday through Friday from 8AM to 4PM, or they will be expelled.
+Output: {"A,p":["every"],"A":["student"],"Cac":["Once admitted to university"],"D":["must"],"I":["attend"],"Bdir":["classes"],"Bdir,p":["obligatory"],"Cex":["Monday through Friday from 8AM to 4PM"],"O":["they will be expelled"]}
+
+Input: Supervisors shall provide constructive feedback to junior staff.
+Output: {"I":["provide"],"A":["Supervisors"],"Bdir,p":["constructive"],"Bdir":["feedback"],"Bind":["staff"],"Bind,p":["junior"],"D":["shall"]}
+
+Input: The commission shall, by March 1, 2008, transfer to electrical corporations serving customers subject to the renewable energy public goods charge the remaining unencumbered funds in the New Renewable Resources Account.  
+Output: {"A":["commission"],"D":["shall"],"Cex":["by March 1, 2008"],"I":["transfer"],"Bdir":["remaining unencumbered funds"],"Bdir,p":["in the New Renewable Resources Account"],"Bind":["electrical corporations"],"Bind,p":["serving customers subject to the renewable energy public goods charge"]}

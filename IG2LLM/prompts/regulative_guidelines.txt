@@ -1,0 +1,10 @@
+- Extract components **only when explicitly stated**. Do not infer or fabricate any part of the statement.
+- Assign each literal phrase to a **single component** only. Do not duplicate or reuse across components.
+- Use **semantic function** to identify components. Do not rely on position or surface syntax.
+- **Omit determiners** ("the," "a," etc.) unless they are part of a proper noun or official title.
+- Extract **Bind** only if a **Bdir** is also present in the statement.
+- Extract **Deontic (D)** only when it modifies an **Aim (I)**. D cannot appear independently.
+- If a statement includes **multiple instances** of a component type (e.g., two distinct Aims or multiple Activation Conditions), extract each separately.
+- If components (e.g., multiple Aims) share modifiers or objects, extract shared elements once unless their semantic roles differ.
+- Detachable descriptors (e.g., "obligatory classes") should be extracted as property components (A,p, Bdir,p, Bind,p).
+- Do not extract embedded descriptors separately if this would fragment the phrase or alter its meaning.

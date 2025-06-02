@@ -1,0 +1,10 @@
+A statement is constitutive if and only if it contains:
+- **E (Constituted Entity)**: the institutional object, role, or concept being defined or modified
+- **F (Constitutive Function)**: the action or relational expression that defines, composes, or modifies E
+- **Context**: at least one of the following must be present:
+  - **Cac (Activation Condition)**
+  - **Cex (Execution Constraint)**
+
+If no context is explicitly provided, assume the default interpretation that the statement applies "under all conditions" and with "no execution constraints." However, do not extract these defaults as components. Only extract Cac or Cex if they are explicitly expressed.
+
+All other components are optional but must be extracted if explicitly present.

@@ -1,0 +1,7 @@
+- Extract only those components that are explicitly stated in the input. Do not infer or fabricate.
+- Each phrase must be assigned to one component only. Do not duplicate or reuse across multiple components.
+- Use semantic function, not sentence position, to identify components.
+- Extract **P,p** only when they provide clear, distinguishable qualification of P.
+- If the statement contains multiple instances of the same component type (e.g., multiple P or P,p values), extract each separately.
+- If components share arguments or modifiers (e.g., multiple P instances linked to one E), extract shared elements only once unless their semantic roles differ.
+- Do not separate embedded modifiers from the nouns they define if doing so would result in an ungrammatical or misleading phrase.
